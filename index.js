@@ -60,9 +60,7 @@ app.post("/api/users/:_id/exercises", async (req, res) => {
 
   const description = req.body.description;
   const duration = parseInt(req.body.duration);
-  const date = req.body.date
-    ? new Date(req.body.date)
-    : new Date();
+  const date = req.body.date ? new Date(req.body.date) : new Date();
 
   const formattedDate = date.toDateString();
 
